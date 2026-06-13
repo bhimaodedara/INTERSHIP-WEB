@@ -1,6 +1,12 @@
 <?php
+// Define font path properties to eliminate stream errors cleanly
+define('FPDF_FONTPATH', 'font/'); 
+
 require('fpdf.php');
 require_once '../config/db_connect.php';
+
+// Include the standard faculty QR code library engine
+include "phpqrcode/qrlib.php";
 
 session_start();
 // Security Check: Only allow authenticated admins to view or trigger this file
@@ -18,18 +24,44 @@ if (!$student) {
     die("Application record not found.");
 }
 
-// Instantiate FPDF using standard dimensions (Portrait, Millimeters, A4 size)
+/* ==========================================================
+   CONCEPT 05 INTEGRATION: DYNAMIC PAYMENT QR GENERATION ENGINE
+   ========================================================== */
+// Generate a unique token reference using the student ID number
+$token = "GPP_APP_" . $student['id'] . "_" . strtoupper(substr($student['full_name'] ?? 'STU', 0, 3));
+
+// Create a directory path for the dynamic PNG file
+$qr_storage_folder = "qr_images/";
+if (!is_dir($qr_storage_folder)) {
+    mkdir($qr_storage_folder, 0755, true);
+}
+$image_path = $qr_storage_folder . $token . ".png";
+
+// Design the checkout URL matching your master workflow plan (Points to Phase 4)
+$pay_endpoint_url = "http://localhost/GPP-WEB-ORGANIZED/pay_fee.php?id=" . $student['id'] . "&token=" . $token;
+
+// Generate the QR file using the faculty script parameters
+QRcode::png(
+    $pay_endpoint_url, // Text metadata context string
+    $image_path,       // Hard drive output destination layout string
+    QR_ECLEVEL_H,      // High precision error correction setting
+    4                  // Component module dot resolution size matrix
+);
+
+
+// ==========================================================
+// INITIALIZE FPDF LAYOUT COMPILATION
+// ==========================================================
 $pdf = new FPDF('P', 'mm', 'A3');
 $pdf->AddPage();
 
 // --- DESIGN INSTITUTION HEADER ---
-// Tip: Ensure "main logo.jpeg" is present in your assets/images path
 if (file_exists('../assets/images/main logo.jpeg')) {
     $pdf->Image('../assets/images/main logo.jpeg', 12, 10, 22, 22);
 }
 
 $pdf->SetFont('Arial', 'B', 15);
-$pdf->Cell(30); // Horizontal spacer to clear space for the logo image
+$pdf->Cell(30); 
 $pdf->Cell(0, 6, 'COMPUTER ENGINEERING DEPARTMENT', 0, 1, 'L');
 
 $pdf->SetFont('Arial', '', 9);
@@ -38,8 +70,8 @@ $pdf->Cell(0, 4, 'Government Polytechnic, Porbandar, Gujarat', 0, 1, 'L');
 $pdf->Cell(30);
 $pdf->Cell(0, 4, 'Contact: +91 9033392721 | Email: info@gpp.edu.in', 0, 1, 'L');
 
-$pdf->Ln(12); // Vertical break to clear the heading sections
-$pdf->Line(10, 36, 200, 36); // Draw a solid divider line across the header width
+$pdf->Ln(12); 
+$pdf->Line(10, 36, 200, 36); 
 
 // --- TITLE BLOCK ---
 $pdf->SetFont('Arial', 'B', 13);
@@ -64,7 +96,7 @@ $pdf->MultiCell(0, 6, $msg, 0, 'L');
 $pdf->Ln(6);
 
 // --- ALLOTMENT INFRASTRUCTURE GRID ---
-$pdf->SetFillColor(245, 245, 245); // Set background color to light gray
+$pdf->SetFillColor(245, 245, 245); 
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->Cell(50, 8, ' Allotted Course:', 1, 0, 'L', true);
 $pdf->SetFont('Arial', '', 11);
@@ -90,15 +122,19 @@ $pdf->Ln(2);
 
 $instruction = "To secure your seat permanently, you are required to complete the payment of the provisional academic fee subscription. Below, your unique mobile transaction QR code has been compiled securely linked to our payment processor endpoint. Please scan the QR code to finish your checkout safely via Razorpay.";
 $pdf->MultiCell(0, 5, $instruction, 0, 'L');
-$pdf->Ln(10);
+$pdf->Ln(5);
 
-// --- INTEGRATING CONCEPT 05 (QR CODE EMBED PLACEHOLDER) ---
-// Note: We leave a designated 35x35mm grid row for our barcode generator phase next
-$pdf->SetFont('Arial', 'I', 10);
-$pdf->Cell(40, 40, '[Admission Payment QR Code]', 1, 0, 'C');
+// --- PRINTING THE LIVE BARCODE ACCORDING TO USER FLOW ---
+// Prints your freshly generated QR code picture cleanly on the page layout
+if (file_exists($image_path)) {
+    $pdf->Image($image_path, 12, 142, 38, 38);
+}
+
+// Move spacing coordinates down to prevent drawing signatures over the barcode image block
+$pdf->SetY(150);
 
 // --- SIGNATURE PANEL ---
-$pdf->Cell(60); // Empty horizontal spacer
+$pdf->Cell(100); 
 $pdf->SetFont('Arial', '', 11);
 $pdf->Cell(0, 5, 'Authorized Signatory', 0, 1, 'C');
 $pdf->Cell(100);
