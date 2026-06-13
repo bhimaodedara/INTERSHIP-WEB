@@ -24,15 +24,20 @@ if (isset($_GET['action']) && isset($_GET['app_id'])) {
     $action = $_GET['action'];
     
     if ($action === 'accept') {
+        // Update selection state inside SQL table
         mysqli_query($conn, "UPDATE applications SET status = 'Accepted' WHERE id = $app_id");
         logAdminAction($conn, 'Status Change', "Accepted student application ID: $app_id");
-        // FUTURE PHASE TRIGGER: FPDF and QR code generation hooks will loop right here!
+        
+        // PASSIVE REDIRECT: Instantly opens the Allotment Generation module in a smooth pipeline sequence
+        header("Location: manage_applications.php?success_id=$app_id");
+        exit;
     } elseif ($action === 'reject') {
         mysqli_query($conn, "UPDATE applications SET status = 'Rejected' WHERE id = $app_id");
         logAdminAction($conn, 'Status Change', "Rejected student application ID: $app_id");
+        
+        header("Location: manage_applications.php");
+        exit;
     }
-    header("Location: manage_applications.php");
-    exit;
 }
 
 // Global metric counters
@@ -53,6 +58,7 @@ $acceptedApps = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
         .main-content { margin-left: 260px; padding: 30px; }
         .nav-link { color: #333; padding: 12px 20px; display: block; text-decoration: none; }
         .nav-link:hover { background: #f8f9fa; }
+        .btn-xs { padding: 1px 5px; font-size: 0.75rem; border-radius: 3px; }
     </style>
 </head>
 <body>
@@ -66,6 +72,20 @@ $acceptedApps = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
     </div>
 
     <div class="main-content">
+        
+        <?php if (isset($_GET['success_id'])): ?>
+            <div class="alert alert-success alert-dismissible fade show shadow-sm border-0 mb-4" role="alert">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-check-circle fa-2x me-3 text-success"></i>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Application Accepted Successfully!</h6>
+                        <small>The provisional allotment documents are now compiled. You can look up the selection records below to view the formal FPDF letter sheet.</small>
+                    </div>
+                </div>
+                <button type="text" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <h3 style="color: #1a365d; font-weight: 700;">Student Admission Desk</h3>
@@ -113,10 +133,15 @@ $acceptedApps = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
                         $res = mysqli_query($conn, "SELECT * FROM applications ORDER BY id DESC");
                         if (mysqli_num_rows($res) > 0) {
                             while($row = mysqli_fetch_assoc($res)) {
-                                // Formulate UI Display Badges for Review Status
-                                $statusBadge = '<span class="badge bg-warning text-dark">Pending</span>';
-                                if ($row['status'] === 'Accepted') $statusBadge = '<span class="badge bg-success">Accepted</span>';
-                                if ($row['status'] === 'Rejected') $statusBadge = '<span class="badge bg-danger">Rejected</span>';
+                                // Formulate Dynamic UI Badges with Nested Allotment PDF hooks [cite: 50, 56, 59]
+                                if ($row['status'] === 'Pending') {
+                                    $statusMarkup = '<span class="badge bg-warning text-dark">Pending</span>';
+                                } elseif ($row['status'] === 'Accepted') {
+                                    $statusMarkup = '<span class="badge bg-success d-block mb-1">Accepted</span>';
+                                    $statusMarkup .= "<a href='generate_allotment.php?id={$row['id']}' target='_blank' class='btn btn-outline-danger btn-xs btn-block'><i class='fas fa-file-pdf me-1'></i>Letter</a>";
+                                } else {
+                                    $statusMarkup = '<span class="badge bg-danger">Rejected</span>';
+                                }
                                 
                                 // Formulate UI Display Badges for Tuition Status
                                 $feeBadge = $row['fee_status'] === 'Paid' ? '<span class="badge bg-success"><i class="fas fa-check me-1"></i>Paid</span>' : '<span class="badge bg-secondary">Unpaid</span>';
@@ -131,7 +156,7 @@ $acceptedApps = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
                                     <td>
                                         <a href='../{$row['document_path']}' target='_blank' class='btn btn-outline-primary btn-sm'><i class='fas fa-file-pdf me-1'></i>View Credentials</a>
                                     </td>
-                                    <td>{$statusBadge}</td>
+                                    <td>{$statusMarkup}</td>
                                     <td>{$feeBadge}</td>
                                     <td class='text-center'>
                                         <div class='btn-group' role='group'>
@@ -151,6 +176,6 @@ $acceptedApps = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total
         </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
