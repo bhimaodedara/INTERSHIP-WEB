@@ -163,7 +163,7 @@
         <div class="container text-center">
             <h2>Apply Online</h2>
             <p>Ready to start your journey? Submit your application now.</p>
-            <a href="https://sites.google.com/view/gppr-cteguj/admission-form" class="btn btn-lg mt-3"
+            <a href="apply.php" class="btn btn-lg mt-3"
                style="background-color: #e9b949; color: #2d3748; padding: 12px 24px;" target="_blank">
                Online Application Form
             </a>

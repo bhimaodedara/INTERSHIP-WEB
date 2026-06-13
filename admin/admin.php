@@ -238,7 +238,7 @@ if (isset($_SESSION['admin_logged_in'])) {
         <div class="p-3 border-bottom"><h5>Admin Portal</h5></div>
         
         <a href="../index.php" class="nav-link text-primary fw-bold border-bottom"><i class="fas fa-external-link-alt me-2"></i>Go to Public Site</a>
-        
+        <a href="manage_applications.php" class="nav-link text-success fw-bold"><i class="fas fa-file-signature me-2"></i>Applications Desk <span class="badge bg-success text-white rounded-pill float-end mt-1">Portal</span></a>
         <a href="admin.php?page=dashboard" class="nav-link <?php echo $page=='dashboard'?'active':''; ?> mt-2"><i class="fas fa-home me-2"></i>Dashboard</a>
         <a href="admin.php?page=faculty" class="nav-link <?php echo $page=='faculty'?'active':''; ?>"><i class="fas fa-users me-2"></i>Faculty (<?php echo $facCount; ?>)</a>
         <a href="admin.php?page=gallery" class="nav-link <?php echo $page=='gallery'?'active':''; ?>"><i class="fas fa-images me-2"></i>Gallery (<?php echo $galCount; ?>)</a>
