@@ -110,7 +110,7 @@ if (isset($_POST['submit_application'])) {
                 VALUES ('$clean_name', '$clean_email', '$clean_phone', '$course', '$doc_db_path')";
         
         if (mysqli_query($conn, $sql)) {
-            $successMsg = "Application submitted successfully! Data matches required patterns.";
+            $successMsg = "Application submitted successfully! you will receive a confirmation email shortly.";
             // Reset sticky fields on success
             $full_name = $email = $phone = $course = "";
         } else {
