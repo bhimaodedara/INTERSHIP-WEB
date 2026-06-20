@@ -10,186 +10,186 @@ require_once 'config/db_connect.php';
     <title>Classrooms - Computer Engineering Department</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/design-system.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-white shadow-sm sticky-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div class="me-3">
-                        <img src="assets/images/main logo.jpeg" alt="University Logo" height="60">
-                    </div>
-                    <div class="d-flex flex-column">
-                        <h1 class="fs-4 mb-0" style="color: #2c3e50;">Computer Engineering Department</h1>
-                        <span class="fs-6" style="color: #3498db;">Excellence in Education Since 1960</span>
-                    </div>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="admission.php">Admissions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-bold" href="classroom.php">Classrooms</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <section class="text-white py-5" style="
-        background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), 
-                    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-        background-size: cover;
-        background-position: center;
-    ">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold mb-4">Classrooms & Facilities</h1>
-            <p class="lead mb-4">Welcome to the Computer Engineering Infrastructure — high-tech learning environments designed for technical training.</p>
-            <p>Our department provides premium academic spaces equipped with specialized computing configurations, reliable data streaming, and presentation devices.</p>
-        </div>
-    </section>
-
-    <section class="py-5">
+<header class="navbar-modern sticky-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3" style="color: #1a365d;">Our Learning Environments</h2>
-                <p class="mx-auto text-muted" style="max-width: 700px;">Explore the state-of-the-art halls and software development workstations built to foster innovative instruction and research.</p>
-            </div>
-
-            <!-- Search Bar UI -->
-
-            <div class="container mb-4">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="input-group shadow-sm rounded">
-                <span class="input-group-text bg-white border-end-0"><i class="fas fa-search text-muted"></i></span>
-                <input type="text" class="form-control border-start-0" placeholder="Search rooms or facilities (e.g., Wi-Fi, Projector)..." onkeyup="showClassroomSuggestion(this.value)" autocomplete="off">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.php">
+                <img src="assets/images/main logo.jpeg" alt="University Logo" height="52" class="rounded-2" style="object-fit:cover;">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-5" style="color: var(--text); line-height:1.2;">Computer Engineering</span>
+                    <span class="small" style="color: var(--secondary); font-size: 0.75rem; letter-spacing: 0.05em;">GOVT. POLYTECHNIC PORBANDAR</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--text);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.php">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="classroom.php">Classrooms</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="theme-toggle-btn" class="theme-toggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero-gradient py-5" style="padding-top: 100px !important; padding-bottom: 80px !important;">
+    <div class="container text-center">
+        <span class="badge px-3 py-2 mb-3" style="background: rgba(6,182,212,0.15); color: var(--secondary-light); border: 1px solid rgba(6,182,212,0.3);">
+            <i class="fas fa-school me-1"></i> Infrastructure
+        </span>
+        <h1 class="display-4 fw-bold mb-3" style="color: white;">Classrooms & Facilities</h1>
+        <p class="lead mx-auto" style="color: rgba(255,255,255,0.8); max-width: 700px;">
+            High-tech learning environments designed for technical training, equipped with specialized computing configurations and modern presentation devices.
+        </p>
     </div>
-</div>
-            <div class="row" id="classroomDisplayArea">
-                <?php
-                // Fetch dynamically from database
-                $query = mysqli_query($conn, "SELECT * FROM classrooms ORDER BY id DESC");
-                if(mysqli_num_rows($query) > 0) {
-                    while($row = mysqli_fetch_assoc($query)) {
-                        $roomNo = htmlspecialchars($row['room_no']);
-                        $capacity = (int)$row['capacity'];
-                        $img = htmlspecialchars($row['img_path']);
-                        
-                        // Break comma separated facilities into structured display strings
-                        $facilities_array = explode(',', $row['facilities']);
-                ?>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-100 border-0 shadow" style="border-radius: 8px; overflow: hidden;">
-                                <img src="<?php echo $img; ?>" alt="<?php echo $roomNo; ?>" class="card-img-top" style="height: 230px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/500x300?text=Classroom+Image'">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h5 class="card-title mb-0" style="color: #1a365d; font-weight: 600;"><?php echo $roomNo; ?></h5>
-                                        <span class="badge bg-light text-primary border border-primary rounded-pill px-2 py-1 small">
-                                            <i class="fas fa-users me-1"></i> Cap: <?php echo $capacity; ?>
-                                        </span>
-                                    </div>
-                                    <hr class="text-muted my-2">
-                                    <p class="card-text text-uppercase text-secondary tracking-wider fw-bold mb-2" style="font-size: 0.75rem;">Facilities Provided:</p>
-                                    <div class="d-flex flex-wrap gap-1">
-                                        <?php 
-                                        foreach($facilities_array as $facility) {
-                                            $trimmed = trim($facility);
-                                            if(!empty($trimmed)) {
-                                                echo "<span class='badge bg-secondary text-capitalize' style='font-size: 0.8rem; font-weight: 500;'>" . htmlspecialchars($trimmed) . "</span>";
-                                            }
+</section>
+
+<!-- Search & Grid -->
+<section class="py-5" style="padding: 80px 0 !important; background: linear-gradient(180deg, var(--bg) 0%, rgba(6,182,212,0.03) 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Learning Environments</h2>
+            <p>Explore state-of-the-art halls and software development workstations</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <div class="input-group shadow-sm rounded-3 overflow-hidden" style="border: 1px solid var(--border);">
+                    <span class="input-group-text border-0 ps-4" style="background: var(--card-bg); color: var(--text-muted);">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-0 py-3" style="background: var(--card-bg); color: var(--text);" 
+                           placeholder="Search rooms or facilities (e.g., Wi-Fi, Projector)..." onkeyup="showClassroomSuggestion(this.value)" autocomplete="off">
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4" id="classroomDisplayArea">
+            <?php
+            // Fetch dynamically from database
+            $query = mysqli_query($conn, "SELECT * FROM classrooms ORDER BY id DESC");
+            if(mysqli_num_rows($query) > 0) {
+                while($row = mysqli_fetch_assoc($query)) {
+                    $roomNo = htmlspecialchars($row['room_no']);
+                    $capacity = (int)$row['capacity'];
+                    $img = htmlspecialchars($row['img_path']);
+                    $facilities_array = explode(',', $row['facilities']);
+            ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-modern h-100" style="overflow: hidden;">
+                            <div style="height: 220px; overflow: hidden; position: relative;">
+                                <img src="<?php echo $img; ?>" alt="<?php echo $roomNo; ?>" class="w-100 h-100" style="object-fit: cover; transition: transform 0.5s ease;" 
+                                     onerror="this.src='https://via.placeholder.com/500x300?text=Classroom+Image'">
+                                <div class="position-absolute top-0 end-0 m-3">
+                                    <span class="badge px-3 py-2" style="background: rgba(0,0,0,0.7); color: white; backdrop-filter: blur(10px);">
+                                        <i class="fas fa-users me-1"></i> Cap: <?php echo $capacity; ?>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-3" style="color: var(--text);"><?php echo $roomNo; ?></h5>
+                                <p class="text-uppercase text-muted fw-bold mb-2" style="font-size: 0.7rem; letter-spacing: 0.1em;">Facilities Provided</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <?php 
+                                    foreach($facilities_array as $facility) {
+                                        $trimmed = trim($facility);
+                                        if(!empty($trimmed)) {
+                                            echo "<span class='badge' style='background: rgba(6,182,212,0.1); color: var(--secondary); font-weight: 500;'>" . htmlspecialchars($trimmed) . "</span>";
                                         }
-                                        ?>
-                                    </div>
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
-                <?php
-                    }
-                } else {
-                    echo "
-                    <div class='col-12 text-center py-5'>
-                        <div class='text-muted'>
-                            <i class='fas fa-school fa-3x mb-3 text-secondary'></i>
-                            <h5>No classrooms or labs configured yet.</h5>
-                            <p class='small text-muted'>Please add item configurations inside your administrative panel setup.</p>
-                        </div>
-                    </div>";
+                    </div>
+            <?php
                 }
-                ?>
+            } else {
+                echo "
+                <div class='col-12 text-center py-5'>
+                    <div class='text-muted'>
+                        <i class='fas fa-school fa-3x mb-3' style='color: var(--text-muted);'></i>
+                        <h5>No classrooms or labs configured yet.</h5>
+                        <p class='small text-muted'>Please add item configurations inside your administrative panel setup.</p>
+                    </div>
+                </div>";
+            }
+            ?>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <h5 class="text-uppercase fw-bold mb-3" style="color: #e9b949;">About the Infrastructure</h5>
+                <p class="text-white-50" style="font-size: 0.9rem; line-height: 1.6;">The Computer Engineering Department operates multiple interactive facilities supporting research work, digital presentations, high-speed broadband deployments, and smart collaboration platforms.</p>
+            </div>
+            <div class="col-lg-6 text-md-end">
+                <h5 class="text-uppercase fw-bold mb-3" style="color: #e9b949;">Department Quicklinks</h5>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> Govt. Polytechnic, Porbandar</li>
+                    <li><a href="admin.php" class="text-white-50 text-decoration-none"><i class="fas fa-lock me-1"></i>Portal Management Login</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <footer class="text-white pt-5 pb-3 mt-auto" style="background-color: #2c3e50;">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-6">
-                    <h5 class="text-uppercase fw-bold mb-3" style="color: #e9b949;">About the Infrastructure</h5>
-                    <p class="text-white-50" style="font-size: 0.9rem; line-height: 1.6;">The Computer Engineering Department operates multiple interactive facilities supporting research work, digital presentations, high-speed broadband deployments, and smart collaboration platforms.</p>
-                </div>
-                <div class="col-lg-6 text-md-end">
-                    <h5 class="text-uppercase fw-bold mb-3" style="color: #e9b949;">Department Quicklinks</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> Govt. Polytechnic, Porbandar</li>
-                        <li><a href="admin.php" class="text-white-50 text-decoration-none"><i class="fas fa-lock me-1"></i>Portal Management Login</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center pt-3 border-top" style="border-color: rgba(255, 255, 255, 0.1) !important;">
-                <p class="mb-0">&copy; <?php echo date('Y'); ?> Computer Engineering Department GPP. All Rights Reserved.</p>
-            </div>
+        <div class="text-center pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+            <p class="mb-0 small">&copy; <?php echo date('Y'); ?> Computer Engineering Department GPP. All Rights Reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
-    <script>
-        // Smooth card hover actions synchronized with the core theme files
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function () {
-                    this.style.transform = 'translateY(-10px)';
-                    this.style.transition = 'transform 0.3s ease';
-                });
-                card.addEventListener('mouseleave', function () {
-                    this.style.transform = 'translateY(0)';
-                });
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/dark-mode.js"></script>
+<script>
+    // Smooth card hover actions
+    document.addEventListener('DOMContentLoaded', function () {
+        const cards = document.querySelectorAll('.card-modern');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                const img = this.querySelector('img');
+                if(img) img.style.transform = 'scale(1.08)';
+            });
+            card.addEventListener('mouseleave', function () {
+                const img = this.querySelector('img');
+                if(img) img.style.transform = 'scale(1)';
             });
         });
-    </script>
+    });
 
-    <!-- AJAX Search Functionality -->
-    <script>
-        function showClassroomSuggestion(str) {
-            let displayArea = document.getElementById("classroomDisplayArea");
-            
-            // Asynchronous communication using XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
-
-            xhr.onreadystatechange = function() {
-                // Confirm transaction state completion (4) and connection success (200)
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Update display area directly without a page refresh
-                    displayArea.innerHTML = xhr.responseText;
-                }
-            };
-
-            // Point GET transaction securely to your clean module folder path
-            xhr.open("GET", "modules/search/classroom_search.php?q=" + encodeURIComponent(str), true);
-            xhr.send();
-        }
-    
-    </script>
+    // AJAX Search Functionality
+    function showClassroomSuggestion(str) {
+        let displayArea = document.getElementById("classroomDisplayArea");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                displayArea.innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open("GET", "modules/search/classroom_search.php?q=" + encodeURIComponent(str), true);
+        xhr.send();
+    }
+</script>
 </body>
 </html>

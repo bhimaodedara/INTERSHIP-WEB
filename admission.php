@@ -1,332 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admissions - Computer Engineering Department</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/design-system.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Header -->
-   <header class="bg-white shadow-sm sticky-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div class="me-3">
-                        <!-- Replace with actual logo URL -->
-                         <img src="assets/images/main logo.jpeg" alt="University Logo" height="60">
 
-                    </div>
-                    <div class="d-flex flex-column">
-                        <h1 class="fs-4 mb-0" style="color: #2c3e50;">Computer Engineering Department</h1>
-                        <span class="fs-6" style="color: #3498db;">Excellence in Education Since 1960</span>
-                    </div>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-bold" href="admission.php">Admissions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="classroom.php">classrooms</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="text-white py-5" style="
-        background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)),
-                    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3') center/cover no-repeat;
-    ">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold">Admissions</h1>
-            <p class="lead">Join our community of innovators. Learn about the admission process, eligibility, and key dates.</p>
-            <a href="#online-form" class="btn btn-lg mt-3" style="background-color: #e9b949; color: #2d3748; padding: 12px 24px;">Apply Now</a>
-        </div>
-    </section>
-
-    <!-- Admission Process Section -->
-    <section class="py-5">
+<header class="navbar-modern sticky-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3" style="color: #1a365d;">Admission Process</h2>
-                <p class="mx-auto" style="max-width: 700px;">Follow these steps to apply for programs at GPPR CTE Guj.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow p-4 text-center">
-                        <i class="fas fa-file-alt fa-3x mb-3" style="color: #1a365d;"></i>
-                        <h5>Step 1: Online Application</h5>
-                        <p>Submit your application through our online portal with required documents.</p>
-                    </div>
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.php">
+                <img src="assets/images/main logo.jpeg" alt="University Logo" height="52" class="rounded-2" style="object-fit:cover;">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-5" style="color: var(--text); line-height:1.2;">Computer Engineering</span>
+                    <span class="small" style="color: var(--secondary); font-size: 0.75rem; letter-spacing: 0.05em;">GOVT. POLYTECHNIC PORBANDAR</span>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow p-4 text-center">
-                        <i class="fas fa-clipboard-check fa-3x mb-3" style="color: #1a365d;"></i>
-                        <h5>Step 2: Document Verification</h5>
-                        <p>Upload and verify academic certificates, ID proofs, and other documents.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow p-4 text-center">
-                        <i class="fas fa-user-check fa-3x mb-3" style="color: #1a365d;"></i>
-                        <h5>Step 3: Interview/Entrance Test</h5>
-                        <p>Attend an interview or entrance exam based on your program.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>For detailed guidelines, refer to the official admission brochure.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Eligibility Criteria Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3" style="color: #1a365d;">Eligibility Criteria</h2>
-                <p class="mx-auto" style="max-width: 700px;">Check if you meet the requirements for admission to GPPR CTE Guj programs.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h5>Undergraduate Programs</h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Minimum 50% in 10+2 (Science/maths/social Science).</li>
-                        <li class="list-group-item">Valid entrance exam scores (e.g., CBSC,bord gujarat).</li>
-                        <li class="list-group-item">Age limit minimum: 16 years.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <h5>Postgraduate Programs</h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Bachelor's degree with 55% aggregate.</li>
-                        <li class="list-group-item">Relevant work experience preferred for some courses.</li>
-                        <li class="list-group-item">Entrance test or merit-based selection.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>Contact admissions office for specific program requirements.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Important Dates Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3" style="color: #1a365d;">Important Dates</h2>
-                <p class="mx-auto" style="max-width: 700px;">Key deadlines for the 2023-2024 academic year at GPP CTE Guj.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 border-100 shadow p-4">
-                        <h5>Application Deadlines</h5>
-                        <ul class="list-unstyled">
-                            <li><strong>Early Bird Applications:</strong> December 31, 2023</li>
-                            <li><strong>Regular Applications:</strong> March 15, 2024</li>
-                            <li><strong>Late Applications:</strong> April 30, 2024</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100 border-100 shadow p-4">
-                        <h5>Entrance Exams & Interviews</h5>
-                        <ul class="list-unstyled">
-                            <li><strong>GUJCET Exam:</strong> April 2024</li>
-                            <li><strong>Interviews:</strong> May-June 2024</li>
-                            <li><strong>Admission Results:</strong> June 30, 2024</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>Dates are subject to change. Check the official website for updates.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Online Form Link Section -->
-    <section id="online-form" class="py-5 text-white" style="background-color: #1a365d;">
-        <div class="container text-center">
-            <h2>Apply Online</h2>
-            <p>Ready to start your journey? Submit your application now.</p>
-            <a href="apply.php" class="btn btn-lg mt-3"
-               style="background-color: #e9b949; color: #2d3748; padding: 12px 24px;" target="_blank">
-               Online Application Form
             </a>
-            <p class="mt-3">For assistance, email: admissions@gpprcteguj.edu.in</p>
-        </div>
-    </section>
-
-    <!-- Important Links Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="mb-3" style="color: #1a365d;">Important Links</h2>
-                <p class="mx-auto" style="max-width: 700px;">Access key resources from GPPR CTE Guj's official page.</p>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--text);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admission.php">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classroom.php">Classrooms</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="theme-toggle-btn" class="theme-toggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-file-pdf fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Admission Form</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/admission-form" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Download</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero-gradient py-5" style="padding-top: 100px !important; padding-bottom: 80px !important;">
+    <div class="container text-center">
+        <span class="badge px-3 py-2 mb-3" style="background: rgba(245,158,11,0.15); color: var(--accent-light); border: 1px solid rgba(245,158,11,0.3);">
+            <i class="fas fa-door-open me-1"></i> Now Accepting Applications
+        </span>
+        <h1 class="display-4 fw-bold mb-3" style="color: white;">Admissions</h1>
+        <p class="lead mx-auto" style="color: rgba(255,255,255,0.8); max-width: 700px;">
+            Join our community of innovators. Learn about the admission process, eligibility criteria, and key dates for the upcoming academic year.
+        </p>
+        <a href="apply.php" class="btn-accent-custom btn-lg mt-4" style="padding: 14px 36px;">
+            <i class="fas fa-paper-plane"></i> Apply Online
+        </a>
+    </div>
+</section>
+
+<!-- Admission Process -->
+<section class="py-5" style="padding: 80px 0 !important; background: linear-gradient(180deg, var(--bg) 0%, rgba(6,182,212,0.03) 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Admission Process</h2>
+            <p>Follow these simple steps to apply for programs at Government Polytechnic Porbandar</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-modern h-100 text-center p-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--secondary), #0891b2); color: white; font-size: 1.5rem;">
+                        <i class="fas fa-file-alt"></i>
                     </div>
+                    <h5 class="fw-bold mb-3">Step 1: Online Application</h5>
+                    <p class="text-muted mb-0">Submit your application through our online portal with all required documents and personal details.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-money-bill fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Fee Structure</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/fee-structure" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">View</a>
+            </div>
+            <div class="col-md-4">
+                <div class="card-modern h-100 text-center p-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--accent), #d97706); color: white; font-size: 1.5rem;">
+                        <i class="fas fa-clipboard-check"></i>
                     </div>
+                    <h5 class="fw-bold mb-3">Step 2: Document Verification</h5>
+                    <p class="text-muted mb-0">Upload and verify academic certificates, ID proofs, and other required documentation.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-book fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Syllabus</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/syllabus" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Download</a>
+            </div>
+            <div class="col-md-4">
+                <div class="card-modern h-100 text-center p-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 72px; height: 72px; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.5rem;">
+                        <i class="fas fa-user-check"></i>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-calendar fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Academic Calendar</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/academic-calendar" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">View</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-question-circle fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>FAQs</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/faqs" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Read</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-users fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Scholarships</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/scholarships" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Apply</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-building fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Campus Facilities</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/facilities" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Explore</a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card h-100 border-0 shadow p-3 text-center">
-                        <i class="fas fa-phone fa-2x mb-2" style="color: #1a365d;"></i>
-                        <h6>Contact Us</h6>
-                        <a href="https://sites.google.com/view/gppr-cteguj/contact" class="btn btn-sm mt-2"
-                           style="background-color: #1a365d; color: white;" target="_blank">Get Info</a>
-                    </div>
+                    <h5 class="fw-bold mb-3">Step 3: Interview / Test</h5>
+                    <p class="text-muted mb-0">Attend an interview or entrance exam based on your selected program requirements.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="py-5 text-white" style="background-color: #1a365d;">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="mb-3 position-relative pb-2" style="border-bottom: 2px solid #e9b949;">About Computer Engineering Department</h5>
-                    <p class="mb-3">The Computer Engineering Department is dedicated to excellence in teaching, research, and public service.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-white"
-                           style="width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1);">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-white"
-                           style="width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1);">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-white"
-                           style="width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1);">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-white"
-                           style="width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1);">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="d-flex align-items-center justify-content-center rounded-circle text-white"
-                           style="width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1);">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+<!-- Eligibility -->
+<section class="py-5" style="padding: 80px 0 !important;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Eligibility Criteria</h2>
+            <p>Check if you meet the requirements for admission to GPP programs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-modern h-100 p-4">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 48px; height: 48px; background: rgba(6,182,212,0.1); color: var(--secondary);">
+                            <i class="fas fa-user-graduate fa-lg"></i>
+                        </div>
+                        <h5 class="fw-bold mb-0">Undergraduate (Diploma)</h5>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="mb-3 position-relative pb-2" style="border-bottom: 2px solid #e9b949;">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="babout us.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li class="mb-2"><a href="blab.html" class="text-white text-decoration-none">Labs</a></li>
-                        <li class="mb-2"><a href="badmission.html" class="text-white text-decoration-none">Admissions</a></li>
-                        <li class="mb-2"><a href="bfaculty.html" class="text-white text-decoration-none">Faculty</a></li>
-                        <li class="mb-2"><a href="bgallery.html" class="text-white text-decoration-none">Gallery</a></li>
-                        <li class="mb-2"><a href="bcontact.html" class="text-white text-decoration-none">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <h5 class="mb-3 position-relative pb-2" style="border-bottom: 2px solid #e9b949;">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt me-2 mt-1" style="color: #e9b949;"></i>
-                            <span>123 University Avenue, City, State 12345</span>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--secondary);"></i>
+                            <span>Minimum 50% in 10th Standard (Science/Maths/Social Science)</span>
                         </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-phone me-2 mt-1" style="color: #e9b949;"></i>
-                            <span>(123) 456-7890</span>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--secondary);"></i>
+                            <span>Valid GUJCET or CBSE Board scores</span>
                         </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-envelope me-2 mt-1" style="color: #e9b949;"></i>
-                            <span>info@university.edu</span>
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-clock me-2 mt-1" style="color: #e9b949;"></i>
-                            <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
+                        <li class="d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--secondary);"></i>
+                            <span>Age limit: Minimum 16 years</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center pt-3 border-top" style="border-color: rgba(255, 255, 255, 0.1) !important;">
-                <p>&copy; 2023 Computer Engineering Department GPP. All Rights Reserved.</p>
+            <div class="col-md-6">
+                <div class="card-modern h-100 p-4">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 48px; height: 48px; background: rgba(245,158,11,0.1); color: var(--accent);">
+                            <i class="fas fa-graduation-cap fa-lg"></i>
+                        </div>
+                        <h5 class="fw-bold mb-0">Lateral Entry (After 12th)</h5>
+                    </div>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--accent);"></i>
+                            <span>12th Science (PCM) with 55% aggregate</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--accent);"></i>
+                            <span>ITI certificate in relevant trade preferred</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <i class="fas fa-check-circle mt-1" style="color: var(--accent);"></i>
+                            <span>Direct admission to 2nd year</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Important Dates -->
+<section class="py-5" style="background: linear-gradient(180deg, var(--bg) 0%, rgba(6,182,212,0.03) 100%); padding: 80px 0 !important;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Important Dates</h2>
+            <p>Key deadlines for the 2024-2025 academic year at GPP</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-modern h-100 p-4">
+                    <h5 class="fw-bold mb-4" style="color: var(--secondary);"><i class="fas fa-calendar-alt me-2"></i>Application Deadlines</h5>
+                    <div class="d-flex justify-content-between align-items-center p-3 mb-3 rounded-3" style="background: rgba(6,182,212,0.05); border-left: 4px solid var(--secondary);">
+                        <div>
+                            <div class="fw-bold">Early Bird Applications</div>
+                            <div class="text-muted small">Get priority processing</div>
+                        </div>
+                        <span class="badge" style="background: var(--secondary); color: white;">Dec 31, 2024</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center p-3 mb-3 rounded-3" style="background: rgba(245,158,11,0.05); border-left: 4px solid var(--accent);">
+                        <div>
+                            <div class="fw-bold">Regular Applications</div>
+                            <div class="text-muted small">Standard admission cycle</div>
+                        </div>
+                        <span class="badge" style="background: var(--accent); color: #0f172a;">Mar 15, 2025</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center p-3 rounded-3" style="background: rgba(100,116,139,0.05); border-left: 4px solid #64748b;">
+                        <div>
+                            <div class="fw-bold">Late Applications</div>
+                            <div class="text-muted small">Subject to seat availability</div>
+                        </div>
+                        <span class="badge bg-secondary">Apr 30, 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-modern h-100 p-4">
+                    <h5 class="fw-bold mb-4" style="color: var(--accent);"><i class="fas fa-tasks me-2"></i>Exams & Results</h5>
+                    <div class="d-flex justify-content-between align-items-center p-3 mb-3 rounded-3" style="background: rgba(6,182,212,0.05); border-left: 4px solid var(--secondary);">
+                        <div>
+                            <div class="fw-bold">GUJCET Exam</div>
+                            <div class="text-muted small">State-level entrance test</div>
+                        </div>
+                        <span class="badge" style="background: var(--secondary); color: white;">Apr 2025</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center p-3 mb-3 rounded-3" style="background: rgba(245,158,11,0.05); border-left: 4px solid var(--accent);">
+                        <div>
+                            <div class="fw-bold">Counseling & Interviews</div>
+                            <div class="text-muted small">Document verification round</div>
+                        </div>
+                        <span class="badge" style="background: var(--accent); color: #0f172a;">May-Jun 2025</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center p-3 rounded-3" style="background: rgba(16,185,129,0.05); border-left: 4px solid #10b981;">
+                        <div>
+                            <div class="fw-bold">Admission Results</div>
+                            <div class="text-muted small">Final merit list published</div>
+                        </div>
+                        <span class="badge" style="background: #10b981; color: white;">Jun 30, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Add hover effect for cards -->
-    
-     <script src="assets/js/bootstrap.bundle.min.js"></script>
-     <script src="assets/js/dark-mode.js"></script>
-        <!-- Your existing footer and scripts -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Add dark mode script -->
-    <script src="assets/js/dark-mode.js"></script>
+<!-- Apply Online CTA -->
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a, #1e3a5f); padding: 80px 0 !important; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; opacity: 0.1; background: radial-gradient(circle at 50% 50%, var(--accent), transparent 60%);"></div>
+    <div class="container text-center position-relative">
+        <h2 class="fw-bold mb-3" style="color: white;">Apply Online</h2>
+        <p class="mx-auto mb-5" style="color: rgba(255,255,255,0.8); max-width: 500px;">Ready to start your journey? Submit your application now and take the first step toward a successful engineering career.</p>
+        <a href="apply.php" class="btn-accent-custom btn-lg" style="padding: 14px 36px;">
+            <i class="fas fa-paper-plane"></i> Online Application Form
+        </a>
+        <p class="mt-4 mb-0" style="color: rgba(255,255,255,0.6);"><i class="fas fa-envelope me-1"></i> For assistance: admissions@gpporbandar.ac.in</p>
+    </div>
+</section>
+
+<!-- Important Links -->
+<section class="py-5" style="padding: 80px 0 !important;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Important Links</h2>
+            <p>Access key resources from the official admission portal</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/admission-form" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-file-pdf fa-2x mb-3" style="color: var(--secondary);"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Admission Form</h6>
+                        <span class="small" style="color: var(--secondary);">Download <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/fee-structure" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-money-bill fa-2x mb-3" style="color: var(--accent);"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Fee Structure</h6>
+                        <span class="small" style="color: var(--secondary);">View <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/syllabus" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-book fa-2x mb-3" style="color: #8b5cf6;"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Syllabus</h6>
+                        <span class="small" style="color: var(--secondary);">Download <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/academic-calendar" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-calendar fa-2x mb-3" style="color: #10b981;"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Academic Calendar</h6>
+                        <span class="small" style="color: var(--secondary);">View <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/faqs" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-question-circle fa-2x mb-3" style="color: #ec4899;"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">FAQs</h6>
+                        <span class="small" style="color: var(--secondary);">Read <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/scholarships" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-users fa-2x mb-3" style="color: var(--secondary);"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Scholarships</h6>
+                        <span class="small" style="color: var(--secondary);">Apply <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/facilities" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-building fa-2x mb-3" style="color: var(--accent);"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Campus Facilities</h6>
+                        <span class="small" style="color: var(--secondary);">Explore <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="https://sites.google.com/view/gppr-cteguj/contact" target="_blank" class="text-decoration-none">
+                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
+                        <i class="fas fa-phone fa-2x mb-3" style="color: #10b981;"></i>
+                        <h6 class="fw-bold mb-1" style="color: var(--text);">Contact Us</h6>
+                        <span class="small" style="color: var(--secondary);">Get Info <i class="fas fa-external-link-alt ms-1 small"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/images/main logo.jpeg" alt="Logo" height="48" class="rounded-2" style="object-fit:cover;">
+                    <div>
+                        <h5 class="mb-0">Computer Engineering</h5>
+                        <small class="text-muted">Govt. Polytechnic Porbandar</small>
+                    </div>
+                </div>
+                <p class="mb-4" style="color: #94a3b8;">Empowering the next generation of engineers through quality technical education.</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.php"><i class="fas fa-chevron-right me-1 small"></i> Home</a></li>
+                    <li class="mb-2"><a href="about.php"><i class="fas fa-chevron-right me-1 small"></i> About</a></li>
+                    <li class="mb-2"><a href="lab.php"><i class="fas fa-chevron-right me-1 small"></i> Labs</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Admissions</a></li>
+                    <li class="mb-2"><a href="contact.php"><i class="fas fa-chevron-right me-1 small"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled" style="color: #94a3b8;">
+                    <li class="mb-3 d-flex align-items-start gap-2">
+                        <i class="fas fa-map-marker-alt mt-1" style="color: var(--secondary);"></i>
+                        <span>Dut Sai Nagar, Porbandar,<br>Gujarat 360575</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-2">
+                        <i class="fas fa-phone" style="color: var(--secondary);"></i>
+                        <span>(0286) 224-1234</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-envelope" style="color: var(--secondary);"></i>
+                        <span>admissions@gpporbandar.ac.in</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Office Hours</h5>
+                <ul class="list-unstyled" style="color: #94a3b8;">
+                    <li class="mb-2">Mon - Fri: 9:00 AM - 5:00 PM</li>
+                    <li class="mb-2">Saturday: 10:00 AM - 2:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+            <p class="mb-0 small">&copy; 2023 Computer Engineering Department, GPP. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/dark-mode.js"></script>
 </body>
-
 </html>

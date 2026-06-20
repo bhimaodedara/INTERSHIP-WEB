@@ -1,261 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Computer Engineering Department</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/design-system.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body
-    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2d3748; overflow-x: hidden;">
-
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div class="me-3">
-                        <!-- Replace with actual logo URL -->
-                         <img src="assets/images/main logo.jpeg" alt="University Logo" height="60">
-
-                    </div>
-                    <div class="d-flex flex-column">
-                        <h1 class="fs-4 mb-0" style="color: #2c3e50;">Computer Engineering Department</h1>
-                        <span class="fs-6" style="color: #3498db;">Excellence in Education Since 1960</span>
-                    </div>
+<header class="navbar-modern sticky-top">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3" href="index.php">
+                <img src="assets/images/main logo.jpeg" alt="University Logo" height="52" class="rounded-2" style="object-fit:cover;">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-5" style="color: var(--text); line-height:1.2;">Computer Engineering</span>
+                    <span class="small" style="color: var(--secondary); font-size: 0.75rem; letter-spacing: 0.05em;">GOVT. POLYTECHNIC PORBANDAR</span>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link " href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-bold" href="about.php">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="admission.php">Admissions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="classroom.php">classrooms</a></li>
-                    </ul>
-                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--text);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lab.php">Labs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.php">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.php">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classroom.php">Classrooms</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="theme-toggle-btn" class="theme-toggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-
-    <!-- About Hero Section -->
-    <section class="about-hero"
-        style="background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3') center/cover no-repeat; color: white; padding: 100px 0; text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 3rem; margin-bottom: 20px;">About Our Department</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px;">
-                Diploma in Computer Engineering Program at Government Polytechnic Porbandar started in the year 2001
-                with 30 in take. At present department having 90 intake of students with highly meritorious academic
-                background. Meritorious students process precisely by well experience and highly qualified faculties so
-                that excellent outcome in knowledge, skill and attitude domains gained by learners.
-            </p>
         </div>
-    </section>
+    </nav>
+</header>
 
-    <!-- About Content Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 style="color: #1a365d; margin-bottom: 20px; font-size: 1.8rem;">Our Mission & Vision</h3>
-                    <p style="margin-bottom: 20px;">
-                        Vision: To achieve excellence in Computer Engineering by imparting technical and problem solving
-                        skills along with ethical value to meet industrial requirements having social and environmental
-                        concern.
-                    </p>
-                    <p style="margin-bottom: 20px;">
-                        Mission: To provides a learning ambience to enhance discipline knowledge, technical skill and
-                        problem solving skill. To motivates students for lifelong learning to adapt challenges in rapidly
-                        changing technology. To induces ethical values and spirit of social commitment. To provide
-                        opportunities to promote leadership skill required in computer engineering industry’s diverse
-                        culture.
-                    </p>
-                    <a href="#" class="btn"
-                        style="display: inline-block; padding: 12px 24px; background-color: #1a365d; color: white; border-radius: 4px; font-weight: 600; border: none; text-decoration: none;">
-                        Learn More About Our Programs
-                    </a>
+<!-- Hero -->
+<section class="hero-gradient py-5" style="padding-top: 100px !important; padding-bottom: 80px !important;">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3" style="color: white;">About Our Department</h1>
+        <p class="lead mx-auto" style="color: rgba(255,255,255,0.8); max-width: 700px;">
+            Diploma in Computer Engineering Program at Government Polytechnic Porbandar started in 2001 with 30 intake. Today, we proudly host 90 students with highly meritorious academic backgrounds.
+        </p>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="py-5" style="padding: 80px 0 !important;">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge px-3 py-2 mb-3" style="background: rgba(6,182,212,0.1); color: var(--secondary); border: 1px solid rgba(6,182,212,0.2);">
+                    <i class="fas fa-bullseye me-1"></i> Our Purpose
+                </span>
+                <h2 class="fw-bold mb-4" style="font-size: 2.2rem; color: var(--text);">Mission & Vision</h2>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold mb-2" style="color: var(--secondary);"><i class="fas fa-eye me-2"></i>Vision</h5>
+                    <p class="text-muted">To achieve excellence in Computer Engineering by imparting technical and problem-solving skills along with ethical values to meet industrial requirements having social and environmental concern.</p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3"
-                            alt="University Campus"
-                            style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+
+                <div class="mb-4">
+                    <h5 class="fw-bold mb-2" style="color: var(--accent);"><i class="fas fa-rocket me-2"></i>Mission</h5>
+                    <p class="text-muted">To provide a learning ambience to enhance discipline knowledge, technical skill and problem-solving ability. To motivate students for lifelong learning to adapt challenges in rapidly changing technology.</p>
+                </div>
+
+                <a href="admission.php" class="btn-primary-custom">
+                    <i class="fas fa-book-open"></i> Explore Our Programs
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <div class="rounded-4 overflow-hidden shadow-lg" style="border: 4px solid var(--border);">
+                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3" alt="Campus" class="img-fluid" style="width:100%; object-fit:cover; min-height: 400px;">
+                    </div>
+                    <div class="position-absolute" style="bottom: -20px; left: -20px; background: linear-gradient(135deg, var(--secondary), #0891b2); color: white; padding: 20px 30px; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                        <div class="fw-bold fs-4">23+</div>
+                        <div class="small">Years of Excellence</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Stats Section -->
-    <section class="stats py-5" style="background-color: #1a365d; color: white;">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-3 col-6 mb-4">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #e9b949;">1,500+</h3>
-                    <p style="font-size: 1.1rem;">Students Enrolled</p>
+<!-- Stats -->
+<section class="py-5" style="background: linear-gradient(135deg, #0f172a, #1e3a5f); padding: 80px 0 !important;">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h3>1,500+</h3>
+                    <p class="mb-0">Students Enrolled</p>
                 </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #e9b949;">10+</h3>
-                    <p style="font-size: 1.1rem;">Faculty Members</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p class="mb-0">Faculty Members</p>
                 </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #e9b949;">2+</h3>
-                    <p style="font-size: 1.1rem;">Countries Represented</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h3>90</h3>
+                    <p class="mb-0">Annual Intake</p>
                 </div>
-                <div class="col-md-3 col-6 mb-4">
-                    <h3 style="font-size: 2.5rem; margin-bottom: 10px; color: #e9b949;">50+</h3>
-                    <p style="font-size: 1.1rem;">Years of Excellence</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p class="mb-0">Years of Institution</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Timeline Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 style="font-size: 2.5rem; margin-bottom: 15px; color: #1a365d;">Our History</h2>
-                <p style="font-size: 1.1rem; color: #2d3748; max-width: 700px; margin: 0 auto;">
-                    Key milestones that have shaped our department over the decades
-                </p>
-            </div>
-
-          
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h3 style="color: #1a365d; margin-bottom: 10px;">Foundation</h3>
-                            <div style="color: #2b6cb0; font-weight: 600;">2001</div>
-                            <p>The Computer Engineering Department was established with a focus on engineering and
-                                scientific research.</p>
+<!-- Timeline -->
+<section class="py-5" style="padding: 80px 0 !important; background: linear-gradient(180deg, var(--bg) 0%, rgba(6,182,212,0.03) 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our History</h2>
+            <p>Key milestones that have shaped our department over the decades</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="timeline-item">
+                    <div class="card-modern p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="fw-bold mb-0" style="color: var(--text);">Foundation</h4>
+                            <span class="badge" style="background: var(--secondary); color: white;">2001</span>
                         </div>
+                        <p class="text-muted mb-0">The Computer Engineering Department was established with a focus on engineering and scientific research, starting with an intake of 30 students.</p>
                     </div>
                 </div>
-
-                <div class="row justify-content-end mb-4">
-                    <div class="col-md-6">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h3 style="color: #1a365d; margin-bottom: 10px;">Expansion</h3>
-                            <div style="color: #2b6cb0; font-weight: 600;">1985</div>
-                            <p>Added advanced computing programs and became a comprehensive engineering department.</p>
+                <div class="timeline-item">
+                    <div class="card-modern p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="fw-bold mb-0" style="color: var(--text);">Expansion</h4>
+                            <span class="badge" style="background: var(--accent); color: #0f172a;">2010</span>
                         </div>
+                        <p class="text-muted mb-0">Added advanced computing programs and modern lab infrastructure. Intake increased to 60 students to meet growing demand.</p>
                     </div>
                 </div>
-
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h3 style="color: #1a365d; margin-bottom: 10px;">Global Recognition</h3>
-                            <div style="color: #2b6cb0; font-weight: 600;">2000</div>
-                            <p>Achieved international acclaim for research in technology and sustainable development.</p>
+                <div class="timeline-item">
+                    <div class="card-modern p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="fw-bold mb-0" style="color: var(--text);">Global Recognition</h4>
+                            <span class="badge" style="background: var(--secondary); color: white;">2015</span>
                         </div>
+                        <p class="text-muted mb-0">Achieved state-level acclaim for research in technology and sustainable development. Industry partnerships strengthened.</p>
                     </div>
                 </div>
-
-                <div class="row justify-content-end">
-                    <div class="col-md-6">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h3 style="color: #1a365d; margin-bottom: 10px;">Modern Era</h3>
-                            <div style="color: #2b6cb0; font-weight: 600;">2020</div>
-                            <p>Launched innovative online programs and expanded global partnerships during the digital
-                                transformation.</p>
+                <div class="timeline-item" style="border-left-color: transparent;">
+                    <div class="card-modern p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4 class="fw-bold mb-0" style="color: var(--text);">Modern Era</h4>
+                            <span class="badge" style="background: var(--accent); color: #0f172a;">2023</span>
                         </div>
+                        <p class="text-muted mb-0">Launched AI & ML specializations, expanded to 90 intake, and built cutting-edge Cloud Computing and Cybersecurity labs.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer style="background-color: #1a365d; color: white; padding: 60px 0 20px;">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-4 mb-4">
-                    <h3
-                        style="font-size: 1.3rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">
-                        About Computer Engineering Department</h3>
-                    <p style="margin-bottom: 20px;">
-                        The Computer Engineering Department is dedicated to excellence in teaching, research, and public
-                        service.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="#"
-                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; text-decoration: none;">
-                            <i class="fab fa-facebook-f"></i></a>
-                        <a href="#"
-                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; text-decoration: none;">
-                            <i class="fab fa-twitter"></i></a>
-                        <a href="#"
-                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; text-decoration: none;">
-                            <i class="fab fa-instagram"></i></a>
-                        <a href="#"
-                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; text-decoration: none;">
-                            <i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"
-                            style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; text-decoration: none;">
-                            <i class="fab fa-youtube"></i></a>
+<!-- Footer -->
+<footer class="footer-modern pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/images/main logo.jpeg" alt="Logo" height="48" class="rounded-2" style="object-fit:cover;">
+                    <div>
+                        <h5 class="mb-0">Computer Engineering</h5>
+                        <small class="text-muted">Govt. Polytechnic Porbandar</small>
                     </div>
                 </div>
-
-                <div class="col-lg-4 mb-4">
-                    <h3
-                        style="font-size: 1.3rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">
-                        Quick Links</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" style="text-decoration: none;">Home</a></li>
-                        <li class="mb-2"><a href="about.html" style="text-decoration: none;">About Us</a></li>
-                        <li class="mb-2"><a href="labs.html" style="text-decoration: none;">Labs</a></li>
-                        <li class="mb-2"><a href="admissions.html" style="text-decoration: none;">Admissions</a></li>
-                        <li class="mb-2"><a href="faculty.html" style="text-decoration: none;">Faculty</a></li>
-                        <li class="mb-2"><a href="gallery.html" style="text-decoration: none;">Gallery</a></li>
-                        <li class="mb-2"><a href="contact.html" style="text-decoration: none;">Contact us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 mb-4">
-                    <h3
-                        style="font-size: 1.3rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">
-                        Contact Info</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-map-marker-alt me-2 mt-1" style="color: #e9b949;"></i>
-                            123 University Avenue, City, State 12345
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-phone me-2 mt-1" style="color: #e9b949;"></i>
-                            (123) 456-7890
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-envelope me-2 mt-1" style="color: #e9b949;"></i>
-                            info@university.edu
-                        </li>
-                        <li class="mb-3 d-flex align-items-start">
-                            <i class="fas fa-clock me-2 mt-1" style="color: #e9b949;"></i>
-                            Mon-Fri: 8:00 AM - 6:00 PM
-                        </li>
-                    </ul>
+                <p class="mb-4" style="color: #94a3b8;">The Computer Engineering Department is dedicated to excellence in teaching, research, and public service since 1960.</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="text-center pt-3 border-top"
-                style="border-color: rgba(255, 255, 255, 0.1) !important;">
-                <p class="mb-0">&copy; 2023 Computer Engineering Department GPP. All Rights Reserved.</p>
+            <div class="col-lg-2 col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.php"><i class="fas fa-chevron-right me-1 small"></i> Home</a></li>
+                    <li class="mb-2"><a href="about.php"><i class="fas fa-chevron-right me-1 small"></i> About Us</a></li>
+                    <li class="mb-2"><a href="lab.php"><i class="fas fa-chevron-right me-1 small"></i> Labs</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Admissions</a></li>
+                    <li class="mb-2"><a href="faculty.php"><i class="fas fa-chevron-right me-1 small"></i> Faculty</a></li>
+                    <li class="mb-2"><a href="contact.php"><i class="fas fa-chevron-right me-1 small"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Programs</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Computer Engineering</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Electrical Engineering</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Civil Engineering</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Mechanical Engineering</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled" style="color: #94a3b8;">
+                    <li class="mb-3 d-flex align-items-start gap-2">
+                        <i class="fas fa-map-marker-alt mt-1" style="color: var(--secondary);"></i>
+                        <span>Dut Sai Nagar, Porbandar,<br>Gujarat 360575</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-2">
+                        <i class="fas fa-phone" style="color: var(--secondary);"></i>
+                        <span>(0286) 224-1234</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-2">
+                        <i class="fas fa-envelope" style="color: var(--secondary);"></i>
+                        <span>info@gpporbandar.ac.in</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="text-center pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+            <p class="mb-0 small">&copy; 2023 Computer Engineering Department, GPP. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- Only Bootstrap JS kept for navbar toggle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/dark-mode.js"></script>
 </body>
-
 </html>
