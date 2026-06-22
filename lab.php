@@ -123,31 +123,13 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Lab 4 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card-modern h-100">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center gap-3 mb-4">
-                            <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 56px; height: 56px; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.4rem; font-weight: 700;">4</div>
-                            <h5 class="fw-bold mb-0" style="color: var(--text);">AI & Robotics Lab</h5>
-                        </div>
-                        <p class="text-muted mb-3"><strong style="color: var(--text);">Purpose:</strong> Cutting-edge space for experimenting with AI algorithms and robotics applications.</p>
-                        <p class="text-muted mb-3"><strong style="color: var(--text);">Tools:</strong> MATLAB, OpenCV, TensorFlow, Arduino, Raspberry Pi</p>
-                        <p class="text-muted mb-3"><strong style="color: var(--text);">Focus:</strong> Computer vision, NLP, deep learning, robotics</p>
-                        <div class="d-flex flex-wrap gap-2 mt-3">
-                            <span class="badge" style="background: rgba(16,185,129,0.1); color: #10b981;">AI</span>
-                            <span class="badge" style="background: rgba(16,185,129,0.1); color: #10b981;">Robotics</span>
-                            <span class="badge" style="background: rgba(16,185,129,0.1); color: #10b981;">IoT</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Lab 5 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card-modern h-100">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center gap-3 mb-4">
-                            <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent), #d97706); color: white; font-size: 1.4rem; font-weight: 700;">5</div>
+                            <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent), #d97706); color: white; font-size: 1.4rem; font-weight: 700;">4</div>
                             <h5 class="fw-bold mb-0" style="color: var(--text);">Web Development & UI/UX</h5>
                         </div>
                         <p class="text-muted mb-3"><strong style="color: var(--text);">Purpose:</strong> Creative space for designing, developing, and testing websites and applications.</p>
@@ -161,12 +143,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Lab 6 -->
+            <!-- Lab 5 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card-modern h-100">
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center gap-3 mb-4">
-                            <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 56px; height: 56px; background: linear-gradient(135deg, #ec4899, #db2777); color: white; font-size: 1.4rem; font-weight: 700;">6</div>
+                            <div class="d-flex align-items-center justify-content-center rounded-3" style="width: 56px; height: 56px; background: linear-gradient(135deg, #ec4899, #db2777); color: white; font-size: 1.4rem; font-weight: 700;">5</div>
                             <h5 class="fw-bold mb-0" style="color: var(--text);">Cloud Computing Lab</h5>
                         </div>
                         <p class="text-muted mb-3"><strong style="color: var(--text);">Purpose:</strong> High-performance lab for exploring cloud services, virtualization, and distributed computing.</p>
@@ -288,19 +270,6 @@
     </div>
 </section>
 
-<!-- Booking CTA -->
-<section class="py-5" style="background: linear-gradient(135deg, #0f172a, #1e3a5f); padding: 80px 0 !important; position: relative; overflow: hidden;">
-    <div style="position: absolute; inset: 0; opacity: 0.1; background: radial-gradient(circle at 50% 50%, var(--secondary), transparent 60%);"></div>
-    <div class="container text-center position-relative">
-        <h2 class="fw-bold mb-3" style="color: white;">Booking and Access</h2>
-        <p class="mx-auto mb-5" style="color: rgba(255,255,255,0.8); max-width: 600px;">
-            All students must book lab sessions in advance through our Online Lab Booking System. For specific schedules, visit the Timetable Section.
-        </p>
-        <a href="#" class="btn-primary-custom btn-lg" style="padding: 14px 36px;">
-            <i class="fas fa-calendar-check"></i> Book Lab Session
-        </a>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer class="footer-modern pt-5 pb-4">

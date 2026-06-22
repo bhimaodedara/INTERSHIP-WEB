@@ -213,60 +213,27 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card-modern h-100">
+                    <div class="p-4 text-center" style="background: linear-gradient(135deg, #0f172a, #1e293b); border-radius: var(--radius) var(--radius) 0 0;">
+                        <i class="fas fa-hard-hat fa-3x mb-3" style="color: #d41515;"></i>
+                        <h3 class="text-white mb-0">Civil Engineering</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-3">Master civil engineering principles, construction methods, and infrastructure development.</p>
+                        <ul class="list-unstyled text-muted small mb-4">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #d41515;"></i>Civil Structure Design</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #d41515;"></i>Construction Management</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #d41515;"></i>Infrastructure Development</li>
+                        </ul>
+                        <a href="admission.php" class="btn-primary-custom w-100">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- News Section -->
-<section class="py-5" style="padding: 80px 0 !important;">
-    <div class="container">
-        <div class="section-header">
-            <h2>Campus News & Events</h2>
-            <p>Stay updated with the latest happenings in our college community</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card-modern h-100">
-                    <div style="height: 200px; background: linear-gradient(135deg, #0f172a, #1e3a5f); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-microscope fa-3x" style="color: var(--secondary);"></i>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted small mb-2"><i class="far fa-calendar me-1"></i> October 15, 2023</div>
-                        <h3 class="h5 mb-3">Annual Research Symposium</h3>
-                        <p class="text-muted mb-3">Students from across disciplines presented their research findings to faculty and industry experts.</p>
-                        <a href="#" class="fw-bold" style="color: var(--secondary);">Read More <i class="fas fa-arrow-right ms-1 small"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-modern h-100">
-                    <div style="height: 200px; background: linear-gradient(135deg, #1e293b, #334155); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-building fa-3x" style="color: var(--accent);"></i>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted small mb-2"><i class="far fa-calendar me-1"></i> September 28, 2023</div>
-                        <h3 class="h5 mb-3">New Sustainable Science Building</h3>
-                        <p class="text-muted mb-3">The state-of-the-art facility features labs, collaborative spaces, and green technology.</p>
-                        <a href="#" class="fw-bold" style="color: var(--secondary);">Read More <i class="fas fa-arrow-right ms-1 small"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-modern h-100">
-                    <div style="height: 200px; background: linear-gradient(135deg, #0f172a, #1e293b); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-trophy fa-3x" style="color: #f59e0b;"></i>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-muted small mb-2"><i class="far fa-calendar me-1"></i> September 10, 2023</div>
-                        <h3 class="h5 mb-3">National Championship Victory</h3>
-                        <p class="text-muted mb-3">Our athletes brought home the national title after an undefeated season.</p>
-                        <a href="#" class="fw-bold" style="color: var(--secondary);">Read More <i class="fas fa-arrow-right ms-1 small"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- CTA Section -->
 <section class="py-5" style="background: linear-gradient(135deg, #0f172a, #1e3a5f, #0f172a); position: relative; overflow: hidden; padding: 100px 0 !important;">

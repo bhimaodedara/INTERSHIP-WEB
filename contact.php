@@ -100,7 +100,7 @@ if (isset($_POST['submit'])) {
                         <i class="fas fa-phone fa-2x"></i>
                     </div>
                     <h5 class="fw-bold mb-3">Call Us</h5>
-                    <p class="text-muted mb-2">Main Office: (0286) 224-1234<br>Admissions: (0286) 224-1235<br>Fax: (0286) 224-1236</p>
+                    
                     <p class="text-muted mb-0"><strong>Office Hours:</strong><br>Mon-Fri: 9:00 AM - 5:00 PM</p>
                 </div>
             </div>
@@ -189,61 +189,7 @@ if (isset($_POST['submit'])) {
     </div>
 </section>
 
-<!-- Department Contacts -->
-<section class="py-5" style="padding: 80px 0 !important; background: linear-gradient(180deg, var(--bg) 0%, rgba(6,182,212,0.03) 100%);">
-    <div class="container">
-        <div class="section-header">
-            <h2>Department Contacts</h2>
-            <p>Reach out to specific coordinators for specialized assistance</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card-modern h-100 text-center p-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, var(--secondary), #0891b2); color: white; font-size: 1.5rem;">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h5 class="fw-bold mb-1">Department Head</h5>
-                    <p class="text-muted mb-2">Dr. Robert Johnson</p>
-                    <p class="small text-muted mb-1"><i class="fas fa-envelope me-1" style="color: var(--secondary);"></i> r.johnson@gpporbandar.ac.in</p>
-                    <p class="small text-muted mb-0"><i class="fas fa-phone me-1" style="color: var(--secondary);"></i> (0286) 224-1237</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-modern h-100 text-center p-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, var(--accent), #d97706); color: white; font-size: 1.5rem;">
-                        <i class="fas fa-user-edit"></i>
-                    </div>
-                    <h5 class="fw-bold mb-1">Admissions Coordinator</h5>
-                    <p class="text-muted mb-2">Ms. Sarah Williams</p>
-                    <p class="small text-muted mb-1"><i class="fas fa-envelope me-1" style="color: var(--accent);"></i> s.williams@gpporbandar.ac.in</p>
-                    <p class="small text-muted mb-0"><i class="fas fa-phone me-1" style="color: var(--accent);"></i> (0286) 224-1238</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-modern h-100 text-center p-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; font-size: 1.5rem;">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h5 class="fw-bold mb-1">Student Affairs</h5>
-                    <p class="text-muted mb-2">Mr. Michael Brown</p>
-                    <p class="small text-muted mb-1"><i class="fas fa-envelope me-1" style="color: #8b5cf6;"></i> m.brown@gpporbandar.ac.in</p>
-                    <p class="small text-muted mb-0"><i class="fas fa-phone me-1" style="color: #8b5cf6;"></i> (0286) 224-1239</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card-modern h-100 text-center p-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.5rem;">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h5 class="fw-bold mb-1">Lab Coordinator</h5>
-                    <p class="text-muted mb-2">Dr. Emily Davis</p>
-                    <p class="small text-muted mb-1"><i class="fas fa-envelope me-1" style="color: #10b981;"></i> e.davis@gpporbandar.ac.in</p>
-                    <p class="small text-muted mb-0"><i class="fas fa-phone me-1" style="color: #10b981;"></i> (0286) 224-1240</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Map -->
 <section class="py-5" style="padding: 80px 0 !important;">

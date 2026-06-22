@@ -114,8 +114,64 @@
 
 <!-- Footer -->
 <footer class="footer-modern pt-5 pb-4">
-    <div class="container text-center">
-        <p class="mb-0 small">&copy; <?php echo date('Y'); ?> Computer Engineering Department GPP. All Rights Reserved.</p>
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="assets/images/main logo.jpeg" alt="Logo" height="48" class="rounded-2" style="object-fit:cover;">
+                    <div>
+                        <h5 class="mb-0">Computer Engineering</h5>
+                        <small class="text-muted">Govt. Polytechnic Porbandar</small>
+                    </div>
+                </div>
+                <p class="mb-4" style="color: #94a3b8;">Empowering the next generation of engineers through quality technical education.</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.php"><i class="fas fa-chevron-right me-1 small"></i> Home</a></li>
+                    <li class="mb-2"><a href="about.php"><i class="fas fa-chevron-right me-1 small"></i> About</a></li>
+                    <li class="mb-2"><a href="lab.php"><i class="fas fa-chevron-right me-1 small"></i> Labs</a></li>
+                    <li class="mb-2"><a href="admission.php"><i class="fas fa-chevron-right me-1 small"></i> Admissions</a></li>
+                    <li class="mb-2"><a href="contact.php"><i class="fas fa-chevron-right me-1 small"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled" style="color: #94a3b8;">
+                    <li class="mb-3 d-flex align-items-start gap-2">
+                        <i class="fas fa-map-marker-alt mt-1" style="color: var(--secondary);"></i>
+                        <span>Dut Sai Nagar, Porbandar,<br>Gujarat 360575</span>
+                    </li>
+                    <li class="mb-3 d-flex align-items-center gap-2">
+                        <i class="fas fa-phone" style="color: var(--secondary);"></i>
+                        <span>(0286) 224-1234</span>
+                    </li>
+                    <li class="d-flex align-items-center gap-2">
+                        <i class="fas fa-envelope" style="color: var(--secondary);"></i>
+                        <span>admissions@gpporbandar.ac.in</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h5>Office Hours</h5>
+                <ul class="list-unstyled" style="color: #94a3b8;">
+                    <li class="mb-2">Mon - Fri: 9:00 AM - 5:00 PM</li>
+                    <li class="mb-2">Saturday: 10:00 AM - 2:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+            <p class="mb-0 small">&copy; 2023 Computer Engineering Department, GPP. All Rights Reserved.</p>
+        </div>
     </div>
 </footer>
 

@@ -84,7 +84,7 @@
                         <i class="fas fa-clipboard-check"></i>
                     </div>
                     <h5 class="fw-bold mb-3">Step 2: Document Verification</h5>
-                    <p class="text-muted mb-0">Upload and verify academic certificates, ID proofs, and other required documentation.</p>
+                    <p class="text-muted mb-0">Upload academic certificates, required documentation.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -92,8 +92,8 @@
                     <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 72px; height: 72px; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.5rem;">
                         <i class="fas fa-user-check"></i>
                     </div>
-                    <h5 class="fw-bold mb-3">Step 3: Interview / Test</h5>
-                    <p class="text-muted mb-0">Attend an interview or entrance exam based on your selected program requirements.</p>
+                    <h5 class="fw-bold mb-3">Step 3: Analyze </h5>
+                    <p class="text-muted mb-0">All of your details will be analyzed by the administration.</p>
                 </div>
             </div>
         </div>
@@ -237,89 +237,6 @@
     </div>
 </section>
 
-<!-- Important Links -->
-<section class="py-5" style="padding: 80px 0 !important;">
-    <div class="container">
-        <div class="section-header">
-            <h2>Important Links</h2>
-            <p>Access key resources from the official admission portal</p>
-        </div>
-        <div class="row g-3">
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/admission-form" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-file-pdf fa-2x mb-3" style="color: var(--secondary);"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Admission Form</h6>
-                        <span class="small" style="color: var(--secondary);">Download <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/fee-structure" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-money-bill fa-2x mb-3" style="color: var(--accent);"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Fee Structure</h6>
-                        <span class="small" style="color: var(--secondary);">View <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/syllabus" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-book fa-2x mb-3" style="color: #8b5cf6;"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Syllabus</h6>
-                        <span class="small" style="color: var(--secondary);">Download <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/academic-calendar" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-calendar fa-2x mb-3" style="color: #10b981;"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Academic Calendar</h6>
-                        <span class="small" style="color: var(--secondary);">View <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/faqs" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-question-circle fa-2x mb-3" style="color: #ec4899;"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">FAQs</h6>
-                        <span class="small" style="color: var(--secondary);">Read <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/scholarships" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-users fa-2x mb-3" style="color: var(--secondary);"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Scholarships</h6>
-                        <span class="small" style="color: var(--secondary);">Apply <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/facilities" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-building fa-2x mb-3" style="color: var(--accent);"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Campus Facilities</h6>
-                        <span class="small" style="color: var(--secondary);">Explore <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="https://sites.google.com/view/gppr-cteguj/contact" target="_blank" class="text-decoration-none">
-                    <div class="card-modern p-4 text-center h-100" style="transition: var(--transition);">
-                        <i class="fas fa-phone fa-2x mb-3" style="color: #10b981;"></i>
-                        <h6 class="fw-bold mb-1" style="color: var(--text);">Contact Us</h6>
-                        <span class="small" style="color: var(--secondary);">Get Info <i class="fas fa-external-link-alt ms-1 small"></i></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer class="footer-modern pt-5 pb-4">
