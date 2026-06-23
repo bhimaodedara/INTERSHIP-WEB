@@ -1,4 +1,4 @@
-HOSTED WEB - [](gppweb.free.je)
+HOSTED WEB - gppweb.free.je
 
 ADMIN USER - admin
 
