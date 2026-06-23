@@ -4,14 +4,14 @@ require_once '../../config/db_connect.php';
 
 $q = trim($_GET['q'] ?? '');
 
-// Sanitize the input to protect your database
+
 $q = mysqli_real_escape_string($conn, $q);
 
-// If the search bar is empty, pull all faculty members normally
+
 if ($q == '') {
     $sql = "SELECT * FROM faculty";
 } else {
-    // Search for names that start with the typed letters
+   
     $sql = "SELECT * FROM faculty WHERE name LIKE '$q%' ORDER BY name";
 }
 

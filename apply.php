@@ -4,27 +4,27 @@ require_once 'config/db_connect.php';
 $successMsg = "";
 $errorMsg = "";
 
-// Initialize sticky form variables and individual error arrays
+
 $full_name = $email = $phone = $course = "";
 $nameErr = $emailErr = $phoneErr = $courseErr = $fileErr = $captchaErr = "";
 
 if (isset($_POST['submit_application'])) {
     $valid = true;
 
-    // --- GOOGLE reCAPTCHA BACKEND VALIDATION ENGINE ---
+    
     $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
     
     if (empty($recaptcha_response)) {
         $captchaErr = "Please complete the security checkbox validation.";
         $valid = false;
     } else {
-        // Your secret key from Google Admin Console
+        
         $secret_key = '6Ldq5S4tAAAAAEH3-I3XWrAPx0sM2z9kHzseB6vM';
         
-        // Pinpoint Google's API validation gateway endpoint url
+       
         $verify_url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $recaptcha_response;
         
-        // Execute a background transmission request to verify if the token is authentic
+       
         $response_data = file_get_contents($verify_url);
         $response_keys = json_decode($response_data, true);
         
@@ -34,7 +34,7 @@ if (isset($_POST['submit_application'])) {
         }
     }
 
-    // 1. Full Name Validation using Regex (Faculty Specification)
+    
     if (empty($_POST["full_name"])) {
         $nameErr = "Full name is required.";
         $valid = false;
@@ -46,7 +46,7 @@ if (isset($_POST['submit_application'])) {
         }
     }
 
-    // 2. Email Validation using Regex & Unique Check
+    
     if (empty($_POST["email"])) {
         $emailErr = "Email address is required.";
         $valid = false;
@@ -56,7 +56,7 @@ if (isset($_POST['submit_application'])) {
             $emailErr = "Invalid email format configuration.";
             $valid = false;
         } else {
-            // UNIQUE EMAIL CHECK ENGINE
+           
             $clean_email = mysqli_real_escape_string($conn, $email);
             $check_query = "SELECT id FROM applications WHERE email = '$clean_email' LIMIT 1";
             $check_result = mysqli_query($conn, $check_query);
@@ -68,7 +68,7 @@ if (isset($_POST['submit_application'])) {
         }
     }
 
-    // 3. Indian Phone Number Validation using Regex (Faculty Specification)
+   
     if (empty($_POST["phone"])) {
         $phoneErr = "Phone number is required.";
         $valid = false;
@@ -80,7 +80,7 @@ if (isset($_POST['submit_application'])) {
         }
     }
 
-    // 4. Dropdown Course Verification
+    
     if (empty($_POST["course"])) {
         $courseErr = "Please choose a program stream.";
         $valid = false;
@@ -95,7 +95,7 @@ if (isset($_POST['submit_application'])) {
 
     $doc_db_path = "";
 
-    // 5. File Processing block runs only if the primary input validations pass
+   
     if ($valid) {
         if (isset($_FILES['student_doc']) && $_FILES['student_doc']['error'] == 0) {
             $file_name = $_FILES['student_doc']['name'];
@@ -124,7 +124,7 @@ if (isset($_POST['submit_application'])) {
         }
     }
 
-    // Final Insertion Loop runs exclusively if all validation vectors pass
+  
     if ($valid && !empty($doc_db_path)) {
         $clean_name  = mysqli_real_escape_string($conn, $full_name);
         $clean_phone = mysqli_real_escape_string($conn, $phone);

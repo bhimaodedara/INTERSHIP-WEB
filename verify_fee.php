@@ -26,7 +26,7 @@ if (!empty($razorpay_payment_id) && !empty($razorpay_signature) && !empty($razor
             'razorpay_signature'  => $razorpay_signature
         );
 
-        // Call SDK utility verification methods matching the instruction booklet guidelines
+        
         $api->utility->verifyPaymentSignature($attributes);
         $success = true;
     } catch(SignatureVerificationError $e) {
@@ -37,7 +37,7 @@ if (!empty($razorpay_payment_id) && !empty($razorpay_signature) && !empty($razor
     $error = 'Invalid transactional tracking parameters supplied.';
 }
 
-// Update Database applications state internally
+
 if ($success && $student_id > 0) {
     $update_sql = "UPDATE applications SET fee_status = 'Paid' WHERE id = $student_id";
     mysqli_query($conn, $update_sql);

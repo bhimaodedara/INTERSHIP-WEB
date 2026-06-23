@@ -4,13 +4,13 @@ require_once 'config/db_connect.php';
 
 use Razorpay\Api\Api;
 
-// Define your faculty configuration API key credentials
+
 $key_id = "rzp_live_T0E03YO2u78Pfu";
 $key_secret = "IxFXhxbSWSxuk11XiV1eBUoX";
 
 $student_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-// Look up the matching record inside your system applications table
+
 $query = mysqli_query($conn, "SELECT * FROM applications WHERE id = $student_id LIMIT 1");
 $student = mysqli_fetch_assoc($query);
 
@@ -18,17 +18,17 @@ if (!$student) {
     die("Invalid checkout reference: Student file record missing.");
 }
 
-// Redirect back if the invoice has already been settled safely
+
 if ($student['fee_status'] === 'Paid') {
     die("<h3>Payment Notice: This admission application fee has already been settled and verified successfully!</h3>");
 }
 
-// Define the processing amount in lowest denomination integer values (e.g., 1000 paise = ₹10.00 INR)
+//  100 paise = ₹1 INR
 $fee_amount_paise = 100; 
 
 $api = new Api($key_id, $key_secret);
 
-// Generate a valid processing order ID token using Razorpay API methods
+
 $order = $api->order->create([
     'receipt'  => 'REC_APP_' . $student['id'] . '_' . uniqid(),
     'amount'   => $fee_amount_paise,
@@ -37,7 +37,7 @@ $order = $api->order->create([
 
 $razorpay_order_id = $order['id'];
 
-// Save the order token locally into your applications tracking row
+
 mysqli_query($conn, "UPDATE applications SET document_path = CONCAT(document_path, '') WHERE id = $student_id");
 ?>
 <!DOCTYPE html>
