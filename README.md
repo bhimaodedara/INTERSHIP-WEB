@@ -84,7 +84,7 @@ Follow these steps to spin up the portal locally inside your XAMPP stack:
    - Clone the Repository:
    - Bash
 
-   - (https://github.com/YOURUSERNAME/INTERSHIP-WEB/blob)
+   - (https://github.com/YOURUSERNAME/INTERSHIP-WEB/tree/main)
 
    - Move to Server Root:
    - Drop the cloned folder directory inside your XAMPP htdocs/ folder.
