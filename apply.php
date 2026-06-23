@@ -19,7 +19,7 @@ if (isset($_POST['submit_application'])) {
         $valid = false;
     } else {
         // Your secret key from Google Admin Console
-        $secret_key = '6LeM4BctAAAAABEf5hzZGshxuw3cxX_nC3EKdSpf';
+        $secret_key = '6Ldq5S4tAAAAAEH3-I3XWrAPx0sM2z9kHzseB6vM';
         
         // Pinpoint Google's API validation gateway endpoint url
         $verify_url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $recaptcha_response;
@@ -305,7 +305,7 @@ if (isset($_POST['submit_application'])) {
                     </div>
 
                     <div class="mb-4 d-flex flex-column align-items-center">
-                        <div class="g-recaptcha" data-sitekey="6LeM4BctAAAAAM3_GxI8X5_64ygACi42412NoRHN"></div>
+                        <div class="g-recaptcha" data-sitekey="6Ldq5S4tAAAAAJDf3qOqCeIG2B6jjxh8KqHasfjik"></div>
                         <?php if(!empty($captchaErr)): ?>
                             <div class="invalid-feedback-custom"><i class="fas fa-exclamation-triangle me-1"></i><?php echo $captchaErr; ?></div>
                         <?php endif; ?>

@@ -1,9 +1,9 @@
 <?php
 // Database credentials for XAMPP
-$host = "localhost";
-$username = "root";      // Default XAMPP username is 'root'
-$password = "";          // Default XAMPP password is empty
-$database = "gpp";
+$host = "sql111.infinityfree.com";
+$username = "if0_42248268";      
+$password = "hR1OWR3gGC";          
+$database = "if0_42248268_gpp";
 
 try {
     

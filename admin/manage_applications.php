@@ -64,7 +64,7 @@ if (isset($_GET['action']) && isset($_GET['app_id'])) {
                 $qr_storage_folder = "qr_images/";
                 if (!is_dir($qr_storage_folder)) { mkdir($qr_storage_folder, 0755, true); }
                 $image_path = $qr_storage_folder . $token . ".png";
-                $pay_endpoint_url = "http://localhost/GPP-WEB-ORGANIZED/pay_fee.php?id=" . $student['id'] . "&token=" . $token;
+                $pay_endpoint_url = "http://gppweb.free.je/GPP-WEB-ORGANIZED/pay_fee.php?id=" . $student['id'] . "&token=" . $token;
                 QRcode::png($pay_endpoint_url, $image_path, QR_ECLEVEL_H, 4);
 
                 $pdf = new FPDF('P', 'mm', array(210, 297));
