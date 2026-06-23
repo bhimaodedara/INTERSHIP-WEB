@@ -6,10 +6,33 @@ $errorMsg = "";
 
 // Initialize sticky form variables and individual error arrays
 $full_name = $email = $phone = $course = "";
-$nameErr = $emailErr = $phoneErr = $courseErr = $fileErr = "";
+$nameErr = $emailErr = $phoneErr = $courseErr = $fileErr = $captchaErr = "";
 
 if (isset($_POST['submit_application'])) {
     $valid = true;
+
+    // --- GOOGLE reCAPTCHA BACKEND VALIDATION ENGINE ---
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+    
+    if (empty($recaptcha_response)) {
+        $captchaErr = "Please complete the security checkbox validation.";
+        $valid = false;
+    } else {
+        // Your secret key from Google Admin Console
+        $secret_key = '6LeM4BctAAAAABEf5hzZGshxuw3cxX_nC3EKdSpf';
+        
+        // Pinpoint Google's API validation gateway endpoint url
+        $verify_url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $recaptcha_response;
+        
+        // Execute a background transmission request to verify if the token is authentic
+        $response_data = file_get_contents($verify_url);
+        $response_keys = json_decode($response_data, true);
+        
+        if (intval($response_keys["success"]) !== 1) {
+            $captchaErr = "Security verification failed. Please try again.";
+            $valid = false;
+        }
+    }
 
     // 1. Full Name Validation using Regex (Faculty Specification)
     if (empty($_POST["full_name"])) {
@@ -129,6 +152,9 @@ if (isset($_POST['submit_application'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="assets/css/design-system.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <style>
         .form-page-bg {
             min-height: 100vh;
@@ -276,6 +302,13 @@ if (isset($_POST['submit_application'])) {
                         </div>
                         <?php if(!empty($fileErr)): ?><div class="invalid-feedback-custom text-center"><i class="fas fa-exclamation-triangle me-1"></i><?php echo $fileErr; ?></div><?php endif; ?>
                         <small class="text-muted d-block mt-2 text-center"><i class="fas fa-info-circle me-1"></i> Allowed: JPG, PNG, PDF, DOCX. Max size: 5MB.</small>
+                    </div>
+
+                    <div class="mb-4 d-flex flex-column align-items-center">
+                        <div class="g-recaptcha" data-sitekey="6LeM4BctAAAAAM3_GxI8X5_64ygACi42412NoRHN"></div>
+                        <?php if(!empty($captchaErr)): ?>
+                            <div class="invalid-feedback-custom"><i class="fas fa-exclamation-triangle me-1"></i><?php echo $captchaErr; ?></div>
+                        <?php endif; ?>
                     </div>
 
                     <button type="submit" name="submit_application" class="btn-primary-custom w-100 py-3 fw-bold" style="font-size: 1.05rem;">
