@@ -95,7 +95,7 @@ Follow these steps to spin up the portal locally inside your XAMPP stack:
 
        - Create a new database workspace.
 
-       - Go to Import, select your local structural backup file (e.g., database_backup.sql), and run it.
+       - Go to Import, select your local structural backup file (e.g., gpp.sql), and run it.
 
    - Configure Connections:
 
