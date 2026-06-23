@@ -84,7 +84,7 @@ Follow these steps to spin up the portal locally inside your XAMPP stack:
    - Clone the Repository:
    - Bash
 
-   - git clone https://github.com/yourusername/GPP-WEB-ORGANIZED.git
+   - (https://github.com/YOURUSERNAME/INTERSHIP-WEB/blob/main/README.md)
 
    - Move to Server Root:
    - Drop the cloned folder directory inside your XAMPP htdocs/ folder.
